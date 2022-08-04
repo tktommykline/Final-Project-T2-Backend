@@ -27,10 +27,9 @@ public class PlantServiceMySQL implements PlantService
 
 
     @Override
-    public boolean delete( int plantId )
+    public void delete( Integer plantId )
     {
         plantRepo.deleteById(plantId);
-        return true;
     }
 
     @Override
@@ -40,7 +39,7 @@ public class PlantServiceMySQL implements PlantService
     }
 
     @Override
-    public Plant findById(int plantId )
+    public Plant findById(Integer plantId )
     {
        return null;
     }

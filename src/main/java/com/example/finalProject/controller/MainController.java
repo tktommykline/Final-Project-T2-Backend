@@ -20,22 +20,26 @@ public class MainController{
     {
         this.plantService = plantService;
     }
-
+    
+    @CrossOrigin
     @GetMapping("/all")
     public Iterable<Plant> getPlants(){
         return plantService.all();
     }
 
+    @CrossOrigin
     @PostMapping
     public Plant save (@RequestBody PlantDto plantDto){
         return plantService.save( new Plant(plantDto));
     }
 
+    @CrossOrigin
     @GetMapping("/{id}")
     public Plant getPlantById(@PathVariable Integer id){
         return plantService.findById(id);
     }
 
+    @CrossOrigin
     @PutMapping("/{id}")
     public Plant update(@RequestBody PlantDto plantDto, @PathVariable Integer id) {
         Plant plant = plantService.findById(id);
@@ -44,7 +48,7 @@ public class MainController{
         plant.setImageUrl(plant.getImageUrl());
         return plantService.save(plant);
     }
-
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id){
         plantService.delete(id);

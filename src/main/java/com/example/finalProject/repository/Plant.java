@@ -68,4 +68,11 @@ public class Plant
     {
         this.imageUrl = imageUrl;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Plant{" + "id=" + id + ", name='" + name + '\'' + ", description='" + description + '\'' + ", imageUrl='"
+                + imageUrl + '\'' + '}';
+    }
 }

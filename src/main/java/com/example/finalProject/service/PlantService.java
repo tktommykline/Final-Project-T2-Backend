@@ -8,9 +8,9 @@ import java.util.Optional;
 public interface PlantService {
     Plant save(Plant plant );
 
-    boolean delete( int plantId );
+    void delete( Integer plantId );
 
     List<Plant> all();
 
-    Plant findById(int plantId );
+    Plant findById(Integer plantId );
 }
