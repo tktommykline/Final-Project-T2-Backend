@@ -39,8 +39,8 @@ public class PlantServiceMySQL implements PlantService
     }
 
     @Override
-    public Plant findById(Integer plantId )
-    {
-       return null;
+    public Plant findById(int plantId) {
+        Optional<Plant> plant = plantRepo.findById(plantId);
+        return plant.orElse(null);
     }
 }

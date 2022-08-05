@@ -12,5 +12,5 @@ public interface PlantService {
 
     List<Plant> all();
 
-    Plant findById(Integer plantId );
+    Plant findById(int plantId );
 }
